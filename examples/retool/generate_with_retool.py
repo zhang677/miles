@@ -180,7 +180,7 @@ def postprocess_responses(resp: str) -> str:
     return resp
 
 
-async def execute_predictions(prediction: str) -> str:
+async def execute_predictions(prediction: str) -> tuple[str, bool]:
     """Execute predictions and return results"""
     action, content = postprocess_predictions(prediction)
 
